@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
 </head>
 <body>
+<h3> Проверка работы SpringMVC. </h3>
 <div>
-    <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
+    <h4> Приветствие от Каты <a href="/hello">>>></a></h4>
+    <h4> Машинки. Сервис Car. <a href="/car">>>></a></h4>
+    <p>Одна машина <a href="/car?count=1">>>></a></p>
+    <p>Две машины <a href="/car?count=2">>>></a></p>
+    <p>Три машины <a href="/car?count=3">>>></a></p>
+    <p>Четыре машины <a href="/car?count=4">>>></a></p>
+    <p>Пять машин <a href="/car?count=5">>>></a></p>
 </div>
 </body>
 </html>

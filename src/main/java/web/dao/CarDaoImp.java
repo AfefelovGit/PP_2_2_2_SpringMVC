@@ -12,7 +12,7 @@ public class CarDaoImp implements CarDao {
     private final List<Car> cars;
 
     {
-        cars = new ArrayList<Car>();
+        cars = new ArrayList<>();
         cars.add(new Car("Mercedes", "Green", 1998));
         cars.add(new Car("BMW", "Black", 2001));
         cars.add(new Car("Honda", "White", 2011));

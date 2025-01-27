@@ -21,14 +21,12 @@ public class CarDaoImp implements CarDao {
         cars.add(new Car("Citroen", "Yellow", 2024));
     }
 
-    // возврат List<Car> с нужным количеством
     @Override
     public List<Car> getCars(Integer numberCar) {
 
-        if (numberCar == null || numberCar <= 0 || numberCar >= 5) {
+        if (numberCar == null || numberCar <= 0 || numberCar > 5) {
             return cars;
         }
-
         return cars.subList(0, numberCar);
     }
 }

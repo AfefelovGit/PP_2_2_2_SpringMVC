@@ -13,7 +13,7 @@ import java.util.List;
 @Controller
 public class CarController {
 
-    final CarDao carDao;
+    private final CarDao carDao;
 
     @Autowired
     public CarController(CarDao carDao) {
@@ -21,7 +21,7 @@ public class CarController {
     }
 
     @GetMapping(value = "/car")
-    public String car(@RequestParam(value = "count", required = false) Integer count, Model model) {
+    public String getCars(@RequestParam(value = "count", required = false) Integer count, Model model) {
         List<Car> listCar = carDao.getCars(count);
         model.addAttribute("cars", listCar);
         return "car/car";
